@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "marckscript";
+  src: url("fonts/marckscript.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  background-color: rgb(11, 2, 47);
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-container {
+  width: 40%; 
+  height: 100vh; 
+  overflow: hidden;
+  margin-right: 10px;
+  margin-left: 10px;
+ }
+
+.photo-container img { 
+  width: 100%; 
+  min-height: 900px;
+  margin: -50% 0 0 0; 
+ }
+
+.btn {
+  font-family: "marckscript";
+  padding: 20px;
+  background-color: rgb(227, 238, 248);
+  font-size: 20px;
+  color: rgb(11, 2, 47);
+}
+
+#back {
+  text-align: right;
+}
+
+#next {
+  text-align: left;
+}
+
+@media all and (max-width: 920px) {}
