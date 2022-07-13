@@ -12,43 +12,66 @@
   font-weight: normal;
 }
 
-body {
-  background-color: rgb(11, 2, 47);
+a {
+  text-decoration: none;
+  color: white;
 }
 
-.photos {
+body {
+  background-color: #810000;
+}
+
+.title {
+  font-family: "marckscript";
+  font-size: 25px;
+  padding: 5px;
   display: flex;
   justify-content: center;
+  color: white;
 }
 
-.photo-container {
-  width: 40%; 
-  height: 100vh; 
-  overflow: hidden;
-  margin-right: 10px;
-  margin-left: 10px;
- }
+.input-search {
+  display: flex;
+}
 
-.photo-container img { 
-  width: 100%; 
-  min-height: 900px;
-  margin: -50% 0 0 0; 
- }
+#search {
+  flex: 1;
+  padding: 15px;
+}
 
-.btn {
-  font-family: "marckscript";
+.shows {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show {
   padding: 20px;
-  background-color: rgb(227, 238, 248);
-  font-size: 20px;
-  color: rgb(11, 2, 47);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
 }
 
-#back {
-  text-align: right;
+.show p {
+  font-family: "marckscript";
+  font-size: 25px;
 }
 
-#next {
-  text-align: left;
+.show-img {
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 70vh;
 }
 
-@media all and (max-width: 920px) {}
+.show-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+}

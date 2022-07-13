@@ -1,30 +1,11 @@
-const btnBack = document.querySelector('#back');
-const btnNext = document.querySelector('#next');
-const photos = [
-  'img/italia_1.jpg',
-  'img/italia_2.jpg',
-  'img/italia_3.jpg',
-  'img/italia_4.jpg',
-  'img/italia_5.jpg',
-  'img/italia_6.jpg',
-];
+const searchElement = document.querySelector('#search');
+const shows = document.querySelectorAll('.show');
 
-i = 0;
+searchElement.addEventListener('keyup', (event) => {
+    const inputWord = event.target.value.toLowerCase();
 
-btnNext.addEventListener('click', () => {
-  i++;
-  if (i > photos.length-1) {
-    i = 0;
-  };
-  document.querySelector('#photo').src = photos[i];
+    shows.forEach( (item) => {
+        item.querySelector('p').textContent.toLowerCase().includes(inputWord) ? item.style.display = 'block' : item.style.display = 'none';
+    });
+
 });
-
-btnBack.addEventListener('click', () => {
-  i--;
-  if (i < 0) {
-    i = photos.length-1;
-  };
-  document.querySelector('#photo').src = photos[i];
-});
-
-//console.log(photos);
